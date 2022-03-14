@@ -38,6 +38,11 @@
   width: 1000px;
 }
 
+.carrusel{
+  display: flex;
+  justify-content: center;
+}
+
 
 /* PRODUCTOS */
 .productosCards{

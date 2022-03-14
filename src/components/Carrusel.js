@@ -1,12 +1,11 @@
 import React from 'react'
 import '../App.css';
 import envios from '../multimedia/envios.gif'
-import { Productos } from './Productos';
 
 
 export const Carrusel = () => {
     return (
-        <>
+        <div className='carrusel'>
         <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
             <div className="carousel-inner">
                 <div className="carousel-item active">
@@ -28,8 +27,7 @@ export const Carrusel = () => {
                 <span className="visually-hidden">Next</span>
             </button>
         </div>
-    <Productos/>
 
-        </>
+        </div>
     )
 }

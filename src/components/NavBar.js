@@ -2,6 +2,7 @@ import React from 'react'
 import '../App.css';
 import logo from '../multimedia/logo.png'
 import { Carrusel } from './Carrusel';
+import { CartWidget } from './CartWidget';
 
 export const NavBar = () => {
   return (<div className="navBar">
@@ -31,15 +32,15 @@ export const NavBar = () => {
             <li className="nav-item">
               <a className="nav-link" href="#">CONTACTO</a>
             </li>
-            {/* <li className="nav-item">
-              <a className="nav-link" href="#">Pricing</a>
-            </li> */}
+            <li className="nav-item">
+              <a className="nav-link" href="#"><CartWidget/></a>
+            </li>
           </ul>
         </div>
       </div>
+      
     </nav>
 
-    <Carrusel/>
 
   </div>
   )
