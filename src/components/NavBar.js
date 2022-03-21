@@ -1,12 +1,14 @@
 import React from 'react'
-import '../App.css';
+import '../styles/NavBar.css';
 import logo from '../multimedia/logo.png'
-import { Carrusel } from './Carrusel';
 import { CartWidget } from './CartWidget';
+import { categorias } from '../helpers/Strings';
 
 export const NavBar = () => {
+
+
   return (<div className="navBar">
-    <a href="#"><img src={logo} className="imagenLogo" alt="..." /></a>
+    <a href="..."><img src={logo} className="imagenLogo" alt="..." /></a>
     <nav className="navbar navbar-expand-lg navbar-light">
       <div className="container-fluid">
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -15,30 +17,26 @@ export const NavBar = () => {
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">INICIO</a>
+              <a className="nav-link active" aria-current="page" href="...">INICIO</a>
             </li>
             <li className="nav-item dropdown">
               <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 PRODUCTOS
               </a>
               <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <li><a className="dropdown-item" href="#">ALFOMBRAS</a></li>
-                <li><a className="dropdown-item" href="#">ALMOHADONES</a></li>
-                <li><a className="dropdown-item" href="#">BAÑO</a></li>
-                <li><a className="dropdown-item" href="#">LIVING</a></li>
-                <li><a className="dropdown-item" href="#">DORMITORIO</a></li>
+                {categorias.forEach(category => <li><a className="dropdown-item" href="#">{category}</a></li>)}
               </ul>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">CONTACTO</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#"><CartWidget/></a>
+              <a className="nav-link" href="#"><CartWidget /></a>
             </li>
           </ul>
         </div>
       </div>
-      
+
     </nav>
 
 
