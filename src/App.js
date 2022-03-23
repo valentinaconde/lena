@@ -10,9 +10,9 @@ function App() {
 
   return (
     <>
-      <NavBar />,
-      <Carrusel />,
-      <ItemListContainer greeting={'Aqui te va un saludo!'}/>,
+      <NavBar />
+      <Carrusel />
+      <ItemListContainer greeting={'Aqui te va un saludo!'}/>
     </>
   )
 }

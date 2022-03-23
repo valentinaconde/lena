@@ -1,27 +1,20 @@
 import React from 'react'
 
-export const Item = (imagen, titulo, descripcion) => {
-
-    let items = new Promise((resolve, reject) => {
-        setTimeout(function () {
-            resolve(); 
-        }, 2000);
-    });
 
 
-    items.then((res) => {
-        
-        return (
-            <div class="card">
-                <img src="..." class="card-img-top" alt="..." />
-                <div class="card-body">
-                    <h5 class="card-title">${titulo}</h5>
-                    <a href="..." class="btn btn-primary">Ver descripcion</a>
-                </div>
+export const Item = ({item}) => {
+    return (
+        <div class="card">
+            <img src={item.imageURL} class="card-img-top" alt="..." />
+            <div class="card-body d-flex flex-column align-items-center">
+                <h5 class="card-title">{item.title}</h5>
+                <h6 class="card-subtitle mb-2 text-muted ">$ {item.price}</h6>
+                <p class="card-text">{item.description}</p>
+                <a href="#" class="btn btn-outline-success">Mas informacion</a>
             </div>
-        )
-
-
-    })
-
+        </div>
+    )
 }
+
+
+
