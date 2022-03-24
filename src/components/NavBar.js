@@ -25,7 +25,7 @@ export const NavBar = () => {
               </a>
               <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 {/* ayuda, no me funciona */}
-                {categorias.forEach(category => <li><a className="dropdown-item" href="#">{category}</a></li>)}
+                {categorias.map(category => <li><a className="dropdown-item" href="#">{category}</a></li>)}
               </ul>
             </li>
             <li className="nav-item">
