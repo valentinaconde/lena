@@ -1,38 +1,40 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Item } from './Item'
 
-export const ItemList = ({ items }) => {
+export const ItemList = ({items}) => {
+
+    
+    const [itemsState, setItemsState] = useState([]);
+
 
     let promesa = new Promise((resolve, reject) => {
         if (true) {
-            resolve('funciona')
+            resolve(items)
         }
         else {
-            reject('hay un error')
+            reject('No funciona el itemList')
         }
     })
-
+    
+    
+    
     useEffect(() => {
         promesa.then((resp) => {
 
             setTimeout(() => {
-                items.forEach(item => {
-                    //ayuda, no me funciona
-                    <Item item={item} />
-                })
-            }, 2000)
-        }).catch((err) => {
-            console.log(err)
-        })
-    }, [items])
-
-
-
+                setItemsState(resp)
+            })
+        }, 2000)
+            .catch((err) => {
+                console.log(err)
+            })
+    })
 
 
     return (
-        //ayuda, no se donde debe ir el return
-        <p>return</p>
+        <div className='d-flex'>
+            {itemsState.map(it => <Item item={it}/>)}
+        </div>
     )
 
 
