@@ -2,17 +2,16 @@ import React, { useEffect, useState } from 'react'
 import { getItem } from '../helpers/getItem'
 import {ItemDetail} from './ItemDetail'
 
-export const ItemDetailContainer = () => {
-    
+export const ItemDetailContainer = ({item}) => {
     
 
-    const [item, setItem] = useState({})
+    const [actualItem, setActualItem] = useState({})
 
     useEffect(() => {
-        getItem().then((resp) => {
+        getItem(item).then((resp) => {
             setTimeout(() => {
 
-                setItem(resp)
+                setActualItem(resp)
             })
         }, 2000)
             .catch((err) => {
@@ -20,9 +19,11 @@ export const ItemDetailContainer = () => {
             })
     },)
 
-
     return (
-        <ItemDetail item={item}/>
+        
+        <ItemDetail item={actualItem}/>
         
     )
 }
+
+

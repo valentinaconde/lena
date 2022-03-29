@@ -1,0 +1,63 @@
+/* PRODUCTOS */
+.productCards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.productCard {
+  width: 250px;
+  height: auto;
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid rgb(233, 233, 233);
+  text-transform: uppercase;
+  font-size: small;
+}
+
+
+/* BOTON INFORMACION */
+
+.informationButton {
+  color: white;
+  background-color: rgb(199, 174, 142);
+  text-decoration: none;
+  border-radius: 5px;
+  height: 20px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  font-size: small;
+}
+
+.informationButton:hover {
+  background-color: rgb(223, 197, 164);
+  color: white;
+  border-radius: 5px;
+}
+
+.addButton {
+  color: white;
+  background-color: rgb(132, 184, 132);
+  border-radius: 5px;
+  height: 20px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  font-size: small;
+  text-transform: uppercase;
+}
+
+.countButton {
+  color: white;
+  background-color: rgb(132, 184, 132);
+  border-radius: 5px;
+  height: 20px;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+}
+
+.contador {
+  font-size: small;
+}

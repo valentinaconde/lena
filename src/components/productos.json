@@ -1,24 +1,183 @@
 [
         {
             "id" : 1,
-            "title" : "mantel blanco",
-            "price": 100,
+            "title" : "manta angola",
+            "price": 3300,
             "imageURL": "imageURL",
-            "stock": 10
+            "stock": 10,
+            "categoria": "habitacion",
+            "descripcion": "Manta 100% algodon con 3 rayas de cada costado. Medidas aprox : 2x 1,40 aprox"
         },
         {
             "id" : 2,
-            "title" : "mantel negro",
-            "price": 200,
+            "title" : "manta helena",
+            "price": 3690,
             "imageURL": "imageURL",
-            "stock": 20
+            "stock": 20,
+            "categoria": "habitacion",
+            "descripcion": "Manta texturada, 100% algodón. Se puede lavar en lavarropas sin problema. Medida: 1,60 x 2 (Las medidas son aproximadas)"
         },
         {
             "id" : 3,
-            "title" : "mantel rojo",
-            "price": 300,
+            "title" : "almohadon india",
+            "price": 1878,
             "imageURL": "imageURL",
-            "stock": 30
+            "stock": 30,
+            "categoria": "habitacion",
+            "descripcion": "Almohadon confeccionado en Tusor. Medidas: 50x70. Incluye relleno."
+        },
+        {
+            "id" : 4,
+            "title" : "almohadon tulum",
+            "price": 1767,
+            "imageURL": "imageURL",
+            "stock": 20,
+            "categoria": "habitacion",
+            "descripcion": "Almohadon fabricado en Tusor 60x60 cm. Incluye relleno."
+        },
+        {
+            "id" : 5,
+            "title" : "mantel california",
+            "price": 2100,
+            "imageURL": "imageURL",
+            "stock": 30,
+            "categoria": "living",
+            "descripcion": "Mantel confeccionado en tusor 100% algodon. Medidas: 200x150cm. Color off white"
+        },
+        {
+            "id" : 6,
+            "title" : "alfombra calandra",
+            "price": 2878,
+            "imageURL": "imageURL",
+            "stock": 30,
+            "categoria": "living",
+            "descripcion": "Alfombra Calandra fabricada en telar 100% algodon. Medidas: 150x130 cm o 150x200 cm. Variantes: rayas negras, rayas grises o rayas beige."
+        },
+        {
+            "id" : 7,
+            "title" : "alfombra nova",
+            "price": 2211,
+            "imageURL": "imageURL",
+            "stock": 30,
+            "categoria": "living",
+            "descripcion": "Alfombra tejida en telar en hilo de algodon. Las medidas (110x60 cm) o (150x60 cm) son aproximadas, pueden variar de acuerdo a la tension del tejido al igual que los tonos y grosor del hilado entre alfombras. Apta lavarropas y secarropas (meter dentro de una funda por su pelusa)!"
+        },
+        {
+            "id" : 8,
+            "title" : "mantel rayado",
+            "price": 2767,
+            "imageURL": "imageURL",
+            "stock": 30,
+            "categoria": "living",
+            "descripcion": "Mantel confeccionado en tusor 100% algodon. Medidas: 240x150cm"
+        },
+        {
+            "id" : 9,
+            "title" : "cortina silver",
+            "price": 4989,
+            "imageURL": "imageURL",
+            "stock": 30,
+            "categoria": "living",
+            "descripcion": "Cortina confeccionada en Gasa TEXTURADA  100% algodon. El precio corresponde a un juego de dos paños, cada paño mide 2,20 de ancho x 2.50 de largo aprox "
+        },
+        {
+            "id" : 10,
+            "title" : "cortina paris",
+            "price": 3690,
+            "imageURL": "imageURL",
+            "stock": 30,
+            "categoria": "baño",
+            "descripcion": "Cortina de baño 100% algodon. (No incluye cortina plastica). Medida unica 210 DE ALTO x230 cm DE ANCHO"
+        },
+        {
+            "id" : 11,
+            "title" : "servilletas",
+            "price": 1100,
+            "imageURL": "imageURL",
+            "stock": 30,
+            "categoria": "living",
+            "descripcion": "Servilletas  de tussor 100% algodón, sus medidas son 40x40. Viene en pack x4 unidades."
+        },
+        {
+            "id" : 12,
+            "title" : "funda new york",
+            "price": 989,
+            "imageURL": "imageURL",
+            "stock": 30,
+            "categoria": "habitacion",
+            "descripcion": "Funda de almohadón 50x50 cm confeccionado en tussor, es desmontable. No incluye relleno."
+        },
+        {
+            "id" : 13,
+            "title" : "set de fundas x2",
+            "price": 1334,
+            "imageURL": "imageURL",
+            "stock": 30,
+            "categoria": "habitacion",
+            "descripcion": "Set de 2 fundas de almohadones desmontables tamaño 50x80aprox. No incluye relleno. Producto discontinuo sin falla. El color habano puede variar en su tono de color."
+        },
+        {
+            "id" : 14,
+            "title" : "mantel california",
+            "price": 1890,
+            "imageURL": "imageURL",
+            "stock": 30,
+            "categoria": "living",
+            "descripcion": "Mantel confeccionado en tusor 100% algodon. Medidas: 200x150cm. Color off white"
+        },
+        {
+            "id" : 15,
+            "title" : "mantel fondo celeste",
+            "price": 1100,
+            "imageURL": "imageURL",
+            "stock": 30,
+            "categoria": "living",
+            "descripcion": "Mantel confeccionado en tusor 100% algodon. Medidas: 150x200 cm Aproximadamente"
+        },
+        {
+            "id" : 16,
+            "title" : "juego de toallas irish",
+            "price": 1888,
+            "imageURL": "imageURL",
+            "stock": 30,
+            "categoria": "baño",
+            "descripcion": "Juego de toalla y toallón ambas 100% Algodon. Hermosa guarda de diseño viscosa al tono. Colores firmes (no se opacan en los lavados. Medidas comodas: toalla 40x70cm y toallon 70x135cm. Gramaje 400grs"
+        },
+        {
+            "id" : 17,
+            "title" : "set toalla de rostro filadelfia",
+            "price": 2212,
+            "imageURL": "imageURL",
+            "stock": 30,
+            "categoria": "baño",
+            "descripcion": "El set incluye 4 Toallas de rostro. Color: Blanco. Medidas: 41x70cm. Gramaje: 400g. "
+        },
+        {
+            "id" : 18,
+            "title" : "toallon gigante chicago",
+            "price": 2434,
+            "imageURL": "imageURL",
+            "stock": 30,
+            "categoria": "living",
+            "descripcion": "Toallón medidas 150x80 Cm. Calidad extra premium 100%algodon GRAMAJE: 600g"
+        },
+        {
+            "id" : 19,
+            "title" : "cubre sommier",
+            "price": 3212,
+            "imageURL": "imageURL",
+            "stock": 30,
+            "categoria": "habitacion",
+            "descripcion": "Cubre Sommier confeccionado en tussor 100% algodon.Altura de falda: 32cm. Color disponible Off White."
+        },
+        {
+            "id" : 20,
+            "title" : "pie de cama magnolia",
+            "price": 2890,
+            "imageURL": "imageURL",
+            "stock": 30,
+            "categoria": "living",
+            "descripcion": "Pie de cama confeccionada en gasa pañalera. MEDIDAS APROXIMADAS: 1,20 X 2,30. SE RECOMIENDA LAVAR A MANO CON JABON NEUTRO Y AGUA FRIA."
         }
 ]
     

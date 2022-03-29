@@ -3,8 +3,6 @@ import image from '../multimedia/image.png'
 
 export const ItemDetail = ({ item }) => {
 
-  
-
     return (
         <div className='d-flex'>
             <img src={image} className="img-fluid border border-light " alt="" />

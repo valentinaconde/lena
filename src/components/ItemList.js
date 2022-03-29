@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Item } from './Item'
+import '../styles/Items.css'
+
 
 export const ItemList = ({items}) => {
 
@@ -32,8 +34,8 @@ export const ItemList = ({items}) => {
 
 
     return (
-        <div className='d-flex'>
-            {itemsState.map(it => <Item item={it}/>)}
+        <div className='productCards'>
+            {itemsState.map(it => <Item item={it} key={it.id}/>)}
         </div>
     )
 
