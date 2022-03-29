@@ -13,7 +13,7 @@ export const Item = ({ item }) => {
     }
 
     const Detail = () => {
-        return <ItemDetailContainer item={item} />
+        <ItemDetailContainer/>
     }
 
     return (

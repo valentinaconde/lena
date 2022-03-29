@@ -5,7 +5,6 @@ import {ItemDetail} from './ItemDetail'
 export const ItemDetailContainer = () => {
     
     
-    console.log('itemdetailcontainer')
 
     const [item, setItem] = useState({})
 
