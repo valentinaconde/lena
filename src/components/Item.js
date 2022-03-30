@@ -21,7 +21,7 @@ export const Item = ({ item }) => {
                 <p className="card-title">{item.title}</p>
                 <p className="card-subtitle mb-2 text-muted ">$ {item.price}</p>
                 <p className="card-text">{item.description}</p>
-                <Link to={`/item/:id`} className="informationButton">Mas informacion</Link>
+                <Link to={`/item/${item.id}`} className="informationButton">Mas informacion</Link>
                 <ItemCount stock={item.stock} initial={0} onAdd={onAdd} />
             </div>
         </div>

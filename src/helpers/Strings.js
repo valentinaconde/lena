@@ -1,1 +1,1 @@
-export const categorias = ['cuarto', 'baño', 'living']
+export const categorias = ['habitacion', 'toallas', 'living']

@@ -1,9 +1,9 @@
 
-export const getItem = (item) => {
+export const getItem = (itemId) => {
 
     return new Promise((resolve, reject) => {
         if (true) {
-            resolve(item)
+            resolve(itemId)
         }
         else {
             reject('No funciona el itemDetailContainer')

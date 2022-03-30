@@ -82,12 +82,12 @@
         },
         {
             "id" : 10,
-            "title" : "cortina paris",
-            "price": 3690,
+            "title" : "juego de toallas tokio",
+            "price": 2212,
             "imageURL": "imageURL",
             "stock": 30,
-            "categoria": "baño",
-            "descripcion": "Cortina de baño 100% algodon. (No incluye cortina plastica). Medida unica 210 DE ALTO x230 cm DE ANCHO"
+            "categoria": "toallas",
+            "descripcion": "Composición: 100% Algodón. Gramaje 420gr m2. El juego incluye toalla y toallón Medidas:Toallon 135 x 70 cm, Toalla 50 x 80 cm"
         },
         {
             "id" : 11,
@@ -140,7 +140,7 @@
             "price": 1888,
             "imageURL": "imageURL",
             "stock": 30,
-            "categoria": "baño",
+            "categoria": "toallas",
             "descripcion": "Juego de toalla y toallón ambas 100% Algodon. Hermosa guarda de diseño viscosa al tono. Colores firmes (no se opacan en los lavados. Medidas comodas: toalla 40x70cm y toallon 70x135cm. Gramaje 400grs"
         },
         {
@@ -149,7 +149,7 @@
             "price": 2212,
             "imageURL": "imageURL",
             "stock": 30,
-            "categoria": "baño",
+            "categoria": "toallas",
             "descripcion": "El set incluye 4 Toallas de rostro. Color: Blanco. Medidas: 41x70cm. Gramaje: 400g. "
         },
         {
@@ -158,7 +158,7 @@
             "price": 2434,
             "imageURL": "imageURL",
             "stock": 30,
-            "categoria": "living",
+            "categoria": "toallas",
             "descripcion": "Toallón medidas 150x80 Cm. Calidad extra premium 100%algodon GRAMAJE: 600g"
         },
         {
@@ -176,8 +176,16 @@
             "price": 2890,
             "imageURL": "imageURL",
             "stock": 30,
-            "categoria": "living",
+            "categoria": "habitacion",
             "descripcion": "Pie de cama confeccionada en gasa pañalera. MEDIDAS APROXIMADAS: 1,20 X 2,30. SE RECOMIENDA LAVAR A MANO CON JABON NEUTRO Y AGUA FRIA."
+        },
+        {
+            "id" : 21,
+            "title" : "juego de toallones chicago",
+            "price": 3323,
+            "imageURL": "imageURL",
+            "stock": 30,
+            "categoria": "toallas",
+            "descripcion": "El juego incluye 2 piezas: Toallón de 80 x 150 cm Toalla de 50 x 85 cm. Son 100% algodón con un peso de 600 gr/m2."
         }
 ]
-    

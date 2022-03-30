@@ -5,18 +5,14 @@ import { Carrusel } from './components/Carrusel';
 import { ItemListContainer } from './components/ItemListContainer';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import { ItemDetailContainer } from './components/ItemDetailContainer';
+import productos from './components/productos.json'
+
 
 
 
 function App() {
   
-  //prueba porque no se como mandarle el item necesario
-  let item = {
-    id: 1,
-    title: 'Producto 1',
-    price: '$100',
-    description: 'manteles'
-  }
+
 
   return (
     <BrowserRouter>
@@ -27,11 +23,11 @@ function App() {
 
       <Routes>
 
-        <Route path="/" element={ <ItemListContainer/>} />
-        <Route path="/category/:id" element={ <ItemListContainer/>} />
-        <Route path="/item/:id" element={ <ItemDetailContainer item={item}/>} />
+        <Route path="/" element={ <ItemListContainer greeting={'Todos nuestros productos'}/>} />
+        <Route path="/category/:categoryId" element={ <ItemListContainer/>} />
+        <Route path="/item/:itemId" element={ <ItemDetailContainer items={productos}/> } />
 
-        <Route path="*" element={ <Navigate to="/"/>} />
+        <Route path="*" element={<h1>Pagina inexistente</h1>} />
       
       </Routes>
 

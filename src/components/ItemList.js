@@ -3,7 +3,7 @@ import { Item } from './Item'
 import '../styles/Items.css'
 
 
-export const ItemList = ({items}) => {
+export const ItemList = ({items, category}) => {
 
     
     const [itemsState, setItemsState] = useState([]);
@@ -22,9 +22,13 @@ export const ItemList = ({items}) => {
     
     useEffect(() => {
         promesa.then((resp) => {
-
             setTimeout(() => {
-                setItemsState(resp)
+                if(category){
+                    setItemsState(resp.filter(item => item.categoria === category))
+                }
+                else{
+                    setItemsState(resp)
+                }
             })
         }, 2000)
             .catch((err) => {
