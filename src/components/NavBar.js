@@ -18,7 +18,7 @@ export const NavBar = () => {
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <Link to="#" className="nav-link active" aria-current="page">INICIO</Link>
+              <Link to="/" className="nav-link" aria-current="page">INICIO</Link>
             </li>
             <li className="nav-item dropdown">
               <Link to="#" className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">

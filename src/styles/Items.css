@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+
 /* PRODUCTOS */
 .productCards {
   display: flex;
@@ -36,6 +38,7 @@
   border-radius: 5px;
 }
 
+/* BOTON AGREGAR AL CARRITO */
 .addButton {
   color: white;
   background-color: rgb(132, 184, 132);
@@ -48,6 +51,7 @@
   text-transform: uppercase;
 }
 
+/* BOTON CONTADOR */
 .countButton {
   color: white;
   background-color: rgb(132, 184, 132);
@@ -60,4 +64,15 @@
 
 .contador {
   font-size: small;
+}
+
+
+
+/* TITULO CATEGORIAS */
+
+.greeting{
+  font-family: 'Raleway', sans-serif;
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
 }
