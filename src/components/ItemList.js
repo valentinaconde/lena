@@ -38,6 +38,7 @@ export const ItemList = ({items, category}) => {
 
 
     return (
+        
         <div className='productCards'>
             {itemsState.map(it => <Item item={it} key={it.id}/>)}
         </div>

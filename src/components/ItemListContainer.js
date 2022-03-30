@@ -6,6 +6,9 @@ import productos from './productos.json'
 export const ItemListContainer = ({greeting}) => {
         
     const {categoryId} = useParams()
+    if(!greeting){
+        greeting = categoryId
+    }
 
     return (
 

@@ -18,22 +18,21 @@ export const NavBar = () => {
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">INICIO</a>
+              <Link to="#" className="nav-link active" aria-current="page">INICIO</Link>
             </li>
             <li className="nav-item dropdown">
-              <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <Link to="#" className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 PRODUCTOS
-              </a>
+              </Link>
               <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                {/* ayuda, no me funciona */}
                 {categorias.map(category => <li key={category}><Link to={`/category/${category}`} className="dropdown-item">{category}</Link></li>)}
               </ul>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">CONTACTO</a>
+              <Link to="/contacto" className="nav-link" >CONTACTO</Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#"><CartWidget /></a>
+              <Link to="/cart" className="nav-link" ><CartWidget /></Link>
             </li>
           </ul>
         </div>

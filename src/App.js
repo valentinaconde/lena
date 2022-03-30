@@ -6,6 +6,7 @@ import { ItemListContainer } from './components/ItemListContainer';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import { ItemDetailContainer } from './components/ItemDetailContainer';
 import productos from './components/productos.json'
+import { Inicio } from './components/Inicio';
 
 
 
@@ -18,12 +19,11 @@ function App() {
     <BrowserRouter>
       
       <NavBar />
-      <Carrusel />
       
 
       <Routes>
 
-        <Route path="/" element={ <ItemListContainer greeting={'Todos nuestros productos'}/>} />
+        <Route path="/" element={ <Inicio/>} />
         <Route path="/category/:categoryId" element={ <ItemListContainer/>} />
         <Route path="/item/:itemId" element={ <ItemDetailContainer items={productos}/> } />
 

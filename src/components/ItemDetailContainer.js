@@ -12,7 +12,7 @@ export const ItemDetailContainer = ({items}) => {
     useEffect(() => {
         getItem(itemId).then((resp) => {
             setTimeout(() => {
-                //No me funciona esta parte.
+                //ayuda, no me funciona esta parte.
                 setActualItem(items.filter(item => item.id === resp))
             })
         }, 2000)
