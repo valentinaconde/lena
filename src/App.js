@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { ItemDetailContainer } from './components/ItemDetailContainer';
 import productos from './components/productos.json'
 import { Inicio } from './components/Inicio';
+import { Cart } from './components/Cart';
 
 
 
@@ -25,6 +26,7 @@ function App() {
         <Route path="/" element={ <Inicio/>} />
         <Route path="/category/:categoryId" element={ <ItemListContainer/>} />
         <Route path="/item/:itemId" element={ <ItemDetailContainer items={productos}/> } />
+        <Route path="/cart" element={ <Cart/> } />
 
         <Route path="*" element={<h1>Pagina inexistente</h1>} />
       

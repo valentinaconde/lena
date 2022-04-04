@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
-import '../styles/Items.css'
 
-export const ItemCount = ({stock,initial,onAdd}) => {
+export const ItemCount = ({stock,onAdd}) => {
 
-  const [Counter, setCounter] = useState(initial)
+  const [Counter, setCounter] = useState(1)
 
   const subirCantidad = () => {
     if(Counter < stock){
@@ -17,11 +16,11 @@ export const ItemCount = ({stock,initial,onAdd}) => {
     }
   }
 
-  
+
   
   return (
-    <div className='d-flex flex-column mt-2 fs-4 justify-content-center'>
-      <div className='d-flex justify-content-center  mb-2'>
+    <div className='buttonsBox'>
+      <div className='counterBox '>
       <button type="button" className="btn countButton" onClick={bajarCantidad}>-</button>
       <div className='contador ms-2 me-2'>{Counter}</div>
       <button type="button" className="btn countButton " onClick={subirCantidad}>+</button>

@@ -1,30 +1,32 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { getItem } from '../helpers/getItem'
-import {ItemDetail} from './ItemDetail'
+import { ItemDetail } from './ItemDetail'
 
-export const ItemDetailContainer = ({items}) => {
-    
+export const ItemDetailContainer = ({ items }) => {
+
 
     const [actualItem, setActualItem] = useState({})
-    const {itemId} = useParams()
+    const { itemId } = useParams()
 
     useEffect(() => {
         getItem(itemId).then((resp) => {
             setTimeout(() => {
-                //ayuda, no me funciona esta parte.
-                setActualItem(items.filter(item => item.id === resp))
+                items.forEach(item => {
+                    if (item.id == itemId) 
+                        setActualItem(item)
+                })
             })
         }, 2000)
             .catch((err) => {
                 console.log(err)
             })
-    },)
+    }, [itemId])
 
     return (
-        
-        <ItemDetail item={actualItem}/>
-        
+
+        <ItemDetail item={actualItem} />
+
     )
 }
 
