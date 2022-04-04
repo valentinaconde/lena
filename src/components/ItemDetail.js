@@ -12,6 +12,7 @@ export const ItemDetail = ({ item }) => {
     function onAdd() {
 
         console.log(Counter)
+        console.log(item)
 
         Swal.fire({
             icon: 'success',
@@ -20,17 +21,6 @@ export const ItemDetail = ({ item }) => {
             timer: 1500
         })
 
-        // const itemAdd = {
-        //     id,
-        //     title,
-        //     price,
-        //     imageURL,
-        //     stock,
-        //     categoria,
-        //     descripcion
-        // }
-
-        // console.log(itemAdd)
 
     }
 
