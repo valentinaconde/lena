@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 
-export const ItemCount = ({stock,onAdd}) => {
+export const ItemCount = ({stock,onAdd,Counter,setCounter}) => {
 
-  const [Counter, setCounter] = useState(1)
 
   const subirCantidad = () => {
     if(Counter < stock){

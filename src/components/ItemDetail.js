@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { ItemCount } from './ItemCount'
 import '../styles/ItemDetail.css'
 // import Swal from 'sweetalert2/dist/sweetalert2.js'
@@ -7,16 +7,17 @@ import '../styles/ItemDetail.css'
 
 export const ItemDetail = ({ item }) => {
     const Swal = require('sweetalert2')
-    let cantidadAgregada = 0
 
 
-    const onAdd = (cantidadAgregada) => {
+    function onAdd() {
+
+        console.log(Counter)
 
         Swal.fire({
             icon: 'success',
-            title: 'Producto agregado correctamente',
+            title: `${Counter} producto(s) agregado(s) al carrito correctamente`,
             showConfirmButton: true,
-            timer: 1100
+            timer: 1500
         })
 
         // const itemAdd = {
@@ -33,6 +34,7 @@ export const ItemDetail = ({ item }) => {
 
     }
 
+    const [Counter, setCounter] = useState(1)
 
     return (
         <div className='boxDetail'>
@@ -41,7 +43,7 @@ export const ItemDetail = ({ item }) => {
                 <p className='titleDetail'>{item.title}</p>
                 <p className='priceDetail'>$ {item.price}</p>
                 <p className='descriptionDetail'>{item.description}</p>
-                <ItemCount stock={item.stock} onAdd={onAdd}/>
+                <ItemCount stock={item.stock} onAdd={onAdd} Counter={Counter} setCounter={setCounter}/>
             </div>
         </div>
     )
