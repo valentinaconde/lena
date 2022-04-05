@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { ItemCount } from './ItemCount'
 import '../styles/ItemDetail.css'
+import { CartContext } from '../context/CartContext'
 // import Swal from 'sweetalert2/dist/sweetalert2.js'
 // import 'sweetalert2/src/sweetalert2.scss'
 
@@ -8,11 +9,12 @@ import '../styles/ItemDetail.css'
 export const ItemDetail = ({ item }) => {
     const Swal = require('sweetalert2')
 
+    const {addItem} = useContext(CartContext)
+
+    const [Counter, setCounter] = useState(1)
+
 
     function onAdd() {
-
-        console.log(Counter)
-        console.log(item)
 
         Swal.fire({
             icon: 'success',
@@ -20,11 +22,21 @@ export const ItemDetail = ({ item }) => {
             showConfirmButton: true,
             timer: 1500
         })
+        
 
+            const itemToAdd = {
+                id: item.id,
+                title: item.title,
+                price: item.price,
+                imageURL: item.imageURL,
+                cantidad: Counter
+            }
 
+            addItem(itemToAdd,Counter)
+        
     }
 
-    const [Counter, setCounter] = useState(1)
+
 
     return (
         <div className='boxDetail'>

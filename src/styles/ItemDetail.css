@@ -55,6 +55,7 @@
 /* BOTON AGREGAR AL CARRITO */
 .addButton {
     color: white;
+    border: 0;
     background-color: rgb(132, 184, 132);
     border-radius: 5px;
     height: 20px;
@@ -72,11 +73,15 @@
 .countButton {
     color: white;
     background-color: rgb(132, 184, 132);
-    border-radius: 5px;
-    height: 20px;
-    padding: 2px;
+    width: 23px;
+    height: 23px;
     display: flex;
+    padding-bottom: 2px;
     align-items: center;
+    justify-content: center;
+    border: 0;
+    border-radius: 3px;
+
 }
 
 .contador {

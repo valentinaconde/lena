@@ -1,0 +1,73 @@
+.boxItem {
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 800px;
+    border: 1px solid lightgray;
+}
+
+.removeButton {
+    border: 0;
+    background-color: rgb(199, 174, 142);
+    color: white;
+    padding: 7px;
+    margin-bottom: 15px;
+
+}
+
+.removeButton:hover {
+    background-color: rgb(223, 197, 164);
+    color: white;
+}
+
+.clearButton {
+    position: fixed;
+    bottom: 0px;
+    right: 260px;
+    margin: 10px;
+    width: 200px;
+    background-color: rgb(199, 174, 142);
+    color: white;
+    border: 0;
+    padding: 5px;
+
+}
+
+.finishButton {
+    position: fixed;
+    bottom: 0px;
+    right: 0;
+    margin: 10px;
+    width: 250px;
+    background-color: rgb(199, 174, 142);
+    color: white;
+    border: 0;
+    padding: 5px;
+}
+
+.clearButton:hover {
+    background-color: rgb(223, 197, 164);
+    color: white;
+}
+
+.finishButton:hover {
+    background-color: rgb(223, 197, 164);
+    color: white;
+}
+
+.cartItemImage {
+    padding: 10px;
+    width: 90px;
+    height: 90px;
+    height: auto;
+    border: 1px solid lightgray;
+    padding: 2px;
+}
+
+.subtotalBox {
+    display: flex;
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+}
