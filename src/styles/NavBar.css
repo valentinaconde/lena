@@ -14,15 +14,15 @@
     border-bottom: 1px solid grey;
     width: 100vh;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .imagenLogo {
     height: 120px;
 }
 
-.active {
-    border-top: 1px solid grey;
-    border-bottom: 1px solid grey;
-    font-weight: bold;
-}
+
+
+
+
+

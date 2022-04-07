@@ -42,6 +42,10 @@ function App() {
     setCarrito(carrito.filter(item => item.id !== id))
   }
 
+  const cantidadItemsCart = () => {
+    return carrito.reduce((acc, item) => acc += item.cantidad, 0)
+  }
+
   const [carrito, setCarrito] = useState([])
 
 
@@ -49,7 +53,7 @@ function App() {
 
   return (
 
-    <CartContext.Provider value={{ carrito, addItem, removeItem, clear }}>
+    <CartContext.Provider value={{ carrito, addItem, removeItem, clear , cantidadItemsCart}}>
 
 
       <BrowserRouter>
