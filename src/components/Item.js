@@ -1,6 +1,4 @@
 import React from 'react'
-// import { ItemCount } from './ItemCount'
-// import image from '../multimedia/image.png'
 import { Link } from 'react-router-dom'
 import '../styles/Items.css'
 
@@ -16,6 +14,7 @@ export const Item = ({ item }) => {
                 <p className="card-title">{item.title}</p>
                 <p className="card-subtitle mb-2 text-muted ">$ {item.price}</p>
                 <Link to={`/item/${item.id}`} className="informationButton">Mas informacion</Link>
+                <p className={item.stock === 0 ? "greeting mt-2 mb-0" : "d-none"}>Producto sin stock</p>
             </div>
         </div>
     )

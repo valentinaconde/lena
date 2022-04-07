@@ -1,15 +1,13 @@
-import React, { useContext, useState } from 'react'
+import React, {useContext, useState } from 'react'
 import { ItemCount } from './ItemCount'
 import '../styles/ItemDetail.css'
 import { CartContext } from '../context/CartContext'
-// import Swal from 'sweetalert2/dist/sweetalert2.js'
-// import 'sweetalert2/src/sweetalert2.scss'
 
 
 export const ItemDetail = ({ item }) => {
     const Swal = require('sweetalert2')
 
-    const {addItem} = useContext(CartContext)
+    const { addItem } = useContext(CartContext)
 
     const [Counter, setCounter] = useState(1)
 
@@ -22,20 +20,20 @@ export const ItemDetail = ({ item }) => {
             showConfirmButton: true,
             timer: 1500
         })
-        
 
-            const itemToAdd = {
-                id: item.id,
-                title: item.title,
-                price: item.price,
-                imageURL: item.imageURL,
-                cantidad: Counter
-            }
 
-            addItem(itemToAdd,Counter)
-        
+
+        const itemToAdd = {
+            id: item.id,
+            title: item.title,
+            price: item.price,
+            imageURL: item.imageURL,
+            cantidad: Counter
+        }
+
+        addItem(itemToAdd, Counter)
+
     }
-
 
 
     return (
@@ -45,7 +43,10 @@ export const ItemDetail = ({ item }) => {
                 <p className='titleDetail'>{item.title}</p>
                 <p className='priceDetail'>$ {item.price}</p>
                 <p className='descriptionDetail'>{item.description}</p>
-                <ItemCount stock={item.stock} onAdd={onAdd} Counter={Counter} setCounter={setCounter}/>
+                <p className={item.stock === 0 ? "btn btn-danger disabled greeting" : "d-none"}>Producto sin stock</p>
+                <div className={item.stock === 0 && "d-none"}>
+                    <ItemCount stock={item.stock} onAdd={onAdd} Counter={Counter} setCounter={setCounter} />
+                </div>
             </div>
         </div>
     )
