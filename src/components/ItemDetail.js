@@ -44,7 +44,7 @@ export const ItemDetail = ({ item }) => {
                 <p className='priceDetail'>$ {item.price}</p>
                 <p className='descriptionDetail'>{item.description}</p>
                 <p className={item.stock === 0 ? "btn btn-danger disabled greeting" : "d-none"}>Producto sin stock</p>
-                <div className={item.stock === 0 && "d-none"}>
+                <div className={item.stock === 0 ? "d-none" : undefined}>
                     <ItemCount stock={item.stock} onAdd={onAdd} Counter={Counter} setCounter={setCounter} />
                 </div>
             </div>

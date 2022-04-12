@@ -4,7 +4,7 @@ import '../styles/Footer.css'
 export const Footer = () => {
     return (
         <div className='footer d-flex flex-column align-items-center'>
-            <p className='footerTitle'>imagenes tomadas de pagina GANGA HOME</p>
+            <p className='footerTitle'>productos tomados de pagina GANGA HOME</p>
 
             <div className='redesSociales d-flex mb-2'>
                 <i className="bi bi-instagram"></i>
