@@ -5,20 +5,11 @@ import { collection, getDocs } from 'firebase/firestore'
 import { db } from '../firebase/config'
 
 
-export const ItemList = ({category }) => {
+export const ItemList = ({ category }) => {
 
 
     const [itemsState, setItemsState] = useState([]);
 
-
-        // let promesa = new Promise((resolve, reject) => {
-        //     if (true) {
-        //         resolve(items)
-        //     }
-        //     else {
-        //         reject('No funciona el itemList')
-        //     }
-        // })
 
     useEffect(() => {
         const productosRef = collection(db, 'productos')
@@ -34,22 +25,6 @@ export const ItemList = ({category }) => {
                 }
             })
     }, [category])
-
-    // useEffect(() => {
-    //     promesa.then((resp) => {
-    //         setTimeout(() => {
-    //             if(category){
-    //                 setItemsState(resp.filter(item => item.categoria === category))
-    //             }
-    //             else{
-    //                 setItemsState(resp)
-    //             }
-    //         })
-    //     }, 2000)
-    //         .catch((err) => {
-    //             console.log(err)
-    //         })
-    // })
 
 
     return (

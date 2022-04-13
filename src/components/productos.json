@@ -118,12 +118,12 @@
         },
         {
             "id" : 14,
-            "title" : "mantel california",
+            "title" : "mantel almendra",
             "price": 1890,
-            "imageURL": "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/487/825/products/img_39961-b0a2196f1991f00ce016266231781274-640-0.jpg",
+            "imageURL": "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/487/825/products/4b368e27-5128-4b68-bf5b-1279c3cd7645-eadb68f127005b8ea316479670315992-640-0.jpeg",
             "stock": 30,
             "categoria": "living",
-            "description": "Mantel confeccionado en tusor 100% algodon. Medidas: 200x150cm. Color off white"
+            "description": "Mantel de tussor 100% algodón color almendra, sus medidas son 2.65largo x 1.45ancho aproximadamente. Pueden combinar perfecto con nuestras servilletas off white."
         },
         {
             "id" : 15,
