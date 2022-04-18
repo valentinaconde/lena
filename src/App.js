@@ -15,6 +15,7 @@ import { Footer } from './components/Footer';
 
 import { collection, getDocs } from 'firebase/firestore'
 import { db } from './firebase/config'
+import { Checkout } from './components/Checkout';
 
 
 
@@ -63,11 +64,13 @@ function App() {
 
   const [carrito, setCarrito] = useState([])
 
-
+  const total = () => {
+    return carrito.reduce((acc, item) => acc + (item.price * item.cantidad), 0)
+  }
 
   return (
 
-    <CartContext.Provider value={{ carrito, addItem, removeItem, clear , cantidadItemsCart}}>
+    <CartContext.Provider value={{ carrito, addItem, removeItem, clear , cantidadItemsCart, total}}>
 
 
       <BrowserRouter>
@@ -82,6 +85,7 @@ function App() {
           <Route path="/category/:categoryId" element={<ItemListContainer />} />
           <Route path="/item/:itemId" element={<ItemDetailContainer items={itemsState} />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/checkout" element={<Checkout />} />
 
           <Route path="*" element={<h1>Pagina inexistente</h1>} />
 

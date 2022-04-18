@@ -5,7 +5,7 @@ import '../styles/CarritoCompras.css'
 
 export const Cart = () => {
 
-    let { carrito, removeItem, clear } = useContext(CartContext)
+    let { carrito, removeItem, clear, total } = useContext(CartContext)
 
     return (
         <div>
@@ -31,11 +31,11 @@ export const Cart = () => {
                             )}
 
                         <button type="button" className="clearButton" onClick={clear}>Vaciar carrito</button>
-                        <button type="button" className="finishButton">Finalizar compra</button>
+                        <Link to="/checkout" type="button" className="finishButton">Finalizar compra</Link>
 
                         <div className='subtotalBox'>
                             <p>Subtotal</p>
-                            <p>$ {carrito.reduce((acc, item) => acc + (item.price * item.cantidad), 0)}</p>
+                            <p>${total}</p>
                         </div>
 
                     </div>

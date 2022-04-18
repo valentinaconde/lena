@@ -36,6 +36,9 @@
 
 .finishButton {
     position: fixed;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
     bottom: 0px;
     right: 0;
     margin: 10px;
@@ -52,6 +55,9 @@
 }
 
 .finishButton:hover {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
     background-color: rgb(223, 197, 164);
     color: white;
 }
@@ -81,3 +87,27 @@
     text-transform: uppercase;
 }
 
+/* FORMULARIO CHECKOUT */
+.checkoutForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+}
+
+
+/* BOTON DE CHECKOUT */
+.checkoutButton{
+    background-color: rgb(199, 174, 142);
+    color: white;
+    border: 0;
+    padding: 2px 6px 2px 6px;
+}
