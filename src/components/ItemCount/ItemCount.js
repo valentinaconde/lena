@@ -1,4 +1,5 @@
 import React from 'react'
+import './ItemCount.css'
 
 export const ItemCount = ({stock,onAdd,Counter,setCounter}) => {
 

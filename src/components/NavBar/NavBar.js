@@ -1,10 +1,10 @@
 import React, { useContext } from 'react'
-import '../styles/NavBar.css';
-import logo from '../multimedia/logo.png'
-import { CartWidget } from './CartWidget';
-import { categorias } from '../helpers/Strings';
+import './NavBar.css';
+import logo from '../../multimedia/logo.png'
+import { CartWidget } from '../CartWidget/CartWidget';
+import { categorias } from '../../helpers/Strings';
 import { Link } from 'react-router-dom';
-import { CartContext } from '../context/CartContext';
+import { CartContext } from '../../context/CartContext';
 
 export const NavBar = () => {
 

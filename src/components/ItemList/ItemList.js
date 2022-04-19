@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { Item } from './Item'
-import '../styles/Items.css'
+import { Item } from '../Item/Item'
 import { collection, getDocs } from 'firebase/firestore'
-import { db } from '../firebase/config'
+import { db } from '../../firebase/config'
 
 
 export const ItemList = ({ category }) => {

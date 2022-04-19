@@ -1,18 +1,18 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
-import { CartContext } from '../context/CartContext'
-import '../styles/CarritoCompras.css'
+import { CartContext } from '../../context/CartContext'
+import './Cart.css'
 
 export const Cart = () => {
 
     let { carrito, removeItem, clear, total } = useContext(CartContext)
-
     return (
         <div>
+            <h2 className='greeting mt-5 mb-4'>CARRITO DE COMPRAS</h2>
+
             {
                 carrito.length > 0 ?
                     <div className='boxCarrito d-flex flex-column'>
-                        <h2 className='greeting mt-5 mb-4'>CARRITO DE COMPRAS</h2>
 
                         {
                             carrito.map(item => {
@@ -33,15 +33,11 @@ export const Cart = () => {
                         <button type="button" className="clearButton" onClick={clear}>Vaciar carrito</button>
                         <Link to="/checkout" type="button" className="finishButton">Finalizar compra</Link>
 
-                        <div className='subtotalBox'>
-                            <p>Subtotal</p>
-                            <p>${total}</p>
-                        </div>
+                            <p className='subtotalBox'>Subtotal $ {total()} </p>
 
                     </div>
 
                     : <div>
-                        <h2 className='greeting mt-5 mb-4'>CARRITO DE COMPRAS</h2>
                         <p className='greeting mt-5 mb-4'>No hay productos en el carrito</p>
                         <Link className='greeting mt-5 mb-4' to='/'>Volver al incio</Link>
                     </div>

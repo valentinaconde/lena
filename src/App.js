@@ -1,21 +1,20 @@
 // import logo from './logo.svg';
-import './App.css';
-import { NavBar } from './components/NavBar';
-import { ItemListContainer } from './components/ItemListContainer';
+import { NavBar } from './components/NavBar/NavBar';
+import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { ItemDetailContainer } from './components/ItemDetailContainer';
+import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer';
 // import productos from './components/productos.json'
-import { Inicio } from './components/Inicio';
-import { Cart } from './components/Cart';
+import { Inicio } from './components/Inicio/Inicio';
+import { Cart } from './components/Cart/Cart';
 import { useEffect, useState } from 'react';
 import { CartContext } from './context/CartContext';
 import 'bootswatch/dist/minty/bootstrap.min.css'
-import { Contacto } from './components/Contacto';
-import { Footer } from './components/Footer';
+import { Contacto } from './components/Contacto/Contacto';
+import { Footer } from './components/Footer/Footer';
 
 import { collection, getDocs } from 'firebase/firestore'
 import { db } from './firebase/config'
-import { Checkout } from './components/Checkout';
+import { Checkout } from './components/Checkout/Checkout';
 
 
 

@@ -1,6 +1,6 @@
 import React from 'react'
-import { Carrusel } from './Carrusel'
-import { ItemListContainer } from './ItemListContainer'
+import { Carrusel } from '../Carrusel/Carrusel'
+import { ItemListContainer } from '../ItemListContainer/ItemListContainer'
 
 export const Inicio = () => {
     return (

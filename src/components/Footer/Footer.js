@@ -1,5 +1,6 @@
 import React from 'react'
-import '../styles/Footer.css'
+import './Footer.css'
+
 
 export const Footer = () => {
     return (
@@ -11,11 +12,11 @@ export const Footer = () => {
                 <i className="bi bi-facebook"></i>
                 <i className="bi bi-whatsapp"></i>
             </div>
-
+            
             <div className='pageCreator'>
-            <p className='me-1'>Pagina web creada por </p>
-            <a href="https://github.com/valentinaconde/"  target="_blank">Valentina</a>
-            <p>©</p>
+                <p className='me-1'>Pagina web creada por </p>
+                <a href="https://github.com/valentinaconde/" target="_blank">Valentina</a>
+                <p>©</p>
             </div>
 
         </div>

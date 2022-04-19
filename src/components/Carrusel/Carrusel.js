@@ -1,6 +1,6 @@
 import React from 'react'
-import '../styles/Carrusel.css';
-import envios from '../multimedia/envios.gif'
+import './Carrusel.css';
+import envios from '../../multimedia/envios.gif'
 
 
 export const Carrusel = () => {
