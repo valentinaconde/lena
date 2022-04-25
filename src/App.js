@@ -15,6 +15,7 @@ import { Footer } from './components/Footer/Footer';
 import { collection, getDocs } from 'firebase/firestore'
 import { db } from './firebase/config'
 import { Checkout } from './components/Checkout/Checkout';
+import { Loading } from './components/Loading/Loading';
 
 
 
@@ -23,13 +24,21 @@ function App() {
 
   const productosRef = collection(db, 'productos')
   const [itemsState, setItemsState] = useState([]);
+  const [loading, setLoading] = useState(false)
 
   useEffect(() => {
+    // setLoading(true)
     getDocs(productosRef)
-    .then(resp => {
-      const itemsData = resp.docs.map(doc => doc.data())
-      setItemsState(itemsData)
-    })
+      .then(resp => {
+        const itemsData = resp.docs.map(doc => doc.data())
+        setItemsState(itemsData)
+      })
+      .catch(err => {
+        console.log(err)
+      })
+      .finally(() => {
+        setLoading(false)
+      })
   }, [productosRef])
 
 
@@ -69,32 +78,42 @@ function App() {
 
   return (
 
-    <CartContext.Provider value={{ carrito, addItem, removeItem, clear , cantidadItemsCart, total}}>
+    <>
+      {
+        loading ?
+          <Loading />
+          :
+          <CartContext.Provider value={{ carrito, addItem, removeItem, clear, cantidadItemsCart, total }}>
 
 
-      <BrowserRouter>
+            <BrowserRouter>
 
-        <NavBar />
-
-
-        <Routes>
-
-          <Route path="/" element={<Inicio />} />
-          <Route path="/contacto" element={<Contacto/>} />
-          <Route path="/category/:categoryId" element={<ItemListContainer />} />
-          <Route path="/item/:itemId" element={<ItemDetailContainer items={itemsState} />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/checkout" element={<Checkout />} />
-
-          <Route path="*" element={<h1>Pagina inexistente</h1>} />
-
-        </Routes>
-
-        <Footer/>
+              <NavBar />
 
 
-      </BrowserRouter>
-    </CartContext.Provider>
+              <Routes>
+
+                <Route path="/" element={<Inicio />} />
+                <Route path="/contacto" element={<Contacto />} />
+                <Route path="/category/:categoryId" element={<ItemListContainer />} />
+                <Route path="/item/:itemId" element={<ItemDetailContainer items={itemsState} />} />
+                <Route path="/cart" element={<Cart />} />
+                <Route path="/checkout" element={<Checkout />} />
+
+                <Route path="*" element={<h1>Pagina inexistente</h1>} />
+
+              </Routes>
+
+              <Footer />
+
+
+            </BrowserRouter>
+          </CartContext.Provider>
+
+      }
+    </>
+
+
 
 
   )

@@ -3,7 +3,6 @@ import './ItemCount.css'
 
 export const ItemCount = ({stock,onAdd,Counter,setCounter}) => {
 
-
   const subirCantidad = () => {
     if(Counter < stock){
       setCounter(Counter + 1)
@@ -17,7 +16,6 @@ export const ItemCount = ({stock,onAdd,Counter,setCounter}) => {
   }
 
 
-  
   return (
     <div className='buttonsBox'>
       <div className='counterBox '>
