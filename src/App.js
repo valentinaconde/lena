@@ -1,21 +1,19 @@
-// import logo from './logo.svg';
-import { NavBar } from './components/NavBar/NavBar';
-import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer';
-// import productos from './components/productos.json'
-import { Inicio } from './components/Inicio/Inicio';
-import { Cart } from './components/Cart/Cart';
 import { useEffect, useState } from 'react';
-import { CartContext } from './context/CartContext';
-import 'bootswatch/dist/minty/bootstrap.min.css'
-import { Contacto } from './components/Contacto/Contacto';
-import { Footer } from './components/Footer/Footer';
-
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { collection, getDocs } from 'firebase/firestore'
 import { db } from './firebase/config'
+import 'bootswatch/dist/minty/bootstrap.min.css'
+
+import { NavBar } from './components/NavBar/NavBar';
+import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
+import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer';
+import { Inicio } from './components/Inicio/Inicio';
+import { Cart } from './components/Cart/Cart';
+import { CartContext } from './context/CartContext';
+import { Contacto } from './components/Contacto/Contacto';
+import { Footer } from './components/Footer/Footer';
 import { Checkout } from './components/Checkout/Checkout';
-import { Loading } from './components/Loading/Loading';
+
 
 
 
@@ -24,10 +22,8 @@ function App() {
 
   const productosRef = collection(db, 'productos')
   const [itemsState, setItemsState] = useState([]);
-  const [loading, setLoading] = useState(false)
 
   useEffect(() => {
-    // setLoading(true)
     getDocs(productosRef)
       .then(resp => {
         const itemsData = resp.docs.map(doc => doc.data())
@@ -35,9 +31,6 @@ function App() {
       })
       .catch(err => {
         console.log(err)
-      })
-      .finally(() => {
-        setLoading(false)
       })
   }, [productosRef])
 
@@ -78,43 +71,25 @@ function App() {
 
   return (
 
-    <>
-      {
-        loading ?
-          <Loading />
-          :
-          <CartContext.Provider value={{ carrito, addItem, removeItem, clear, cantidadItemsCart, total }}>
+    <CartContext.Provider value={{ carrito, addItem, removeItem, clear, cantidadItemsCart, total }}>
 
+      <BrowserRouter>
+        <NavBar />
+        <Routes>
 
-            <BrowserRouter>
+          <Route path="/" element={<Inicio />} />
+          <Route path="/contacto" element={<Contacto />} />
+          <Route path="/category/:categoryId" element={<ItemListContainer />} />
+          <Route path="/item/:itemId" element={<ItemDetailContainer items={itemsState} />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/checkout" element={<Checkout items={itemsState}/>} />
 
-              <NavBar />
+          <Route path="*" element={<h1>Pagina inexistente</h1>} />
 
-
-              <Routes>
-
-                <Route path="/" element={<Inicio />} />
-                <Route path="/contacto" element={<Contacto />} />
-                <Route path="/category/:categoryId" element={<ItemListContainer />} />
-                <Route path="/item/:itemId" element={<ItemDetailContainer items={itemsState} />} />
-                <Route path="/cart" element={<Cart />} />
-                <Route path="/checkout" element={<Checkout />} />
-
-                <Route path="*" element={<h1>Pagina inexistente</h1>} />
-
-              </Routes>
-
-              <Footer />
-
-
-            </BrowserRouter>
-          </CartContext.Provider>
-
-      }
-    </>
-
-
-
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+    </CartContext.Provider>
 
   )
 }

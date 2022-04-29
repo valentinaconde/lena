@@ -1,11 +1,13 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
+
 import { CartContext } from '../../context/CartContext'
 import './Cart.css'
 
 export const Cart = () => {
 
     let { carrito, removeItem, clear, total } = useContext(CartContext)
+
     return (
         <div>
             <h2 className='greeting mt-5 mb-4'>CARRITO DE COMPRAS</h2>
@@ -33,7 +35,7 @@ export const Cart = () => {
                         <button type="button" className="clearButton" onClick={clear}>Vaciar carrito</button>
                         <Link to="/checkout" type="button" className="finishButton">Finalizar compra</Link>
 
-                            <p className='subtotalBox'>Subtotal $ {total()} </p>
+                        <p className='subtotalBox'>Subtotal $ {total()} </p>
 
                     </div>
 
@@ -43,7 +45,5 @@ export const Cart = () => {
                     </div>
             }
         </div>
-
-
     )
 }

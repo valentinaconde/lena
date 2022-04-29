@@ -1,0 +1,8 @@
+/* TITULOS Y TEXTOS */
+
+.greeting{
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+}
