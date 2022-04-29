@@ -70,7 +70,7 @@ export const Checkout = ({ items }) => {
             <form onSubmit={handleSubmit} className="formulario">
                 <input className='form-control my-2'
                     type={'text'}
-                    placeholder='Nombre'
+                    placeholder='Nombre y Apellido'
                     value={values.nombre}
                     name='nombre'
                     onChange={handleInputChange}
